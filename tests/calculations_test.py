@@ -68,3 +68,14 @@ def test_get_nth_fibonacci_ten():
 
     # Assert
     assert result == 55
+
+def test_get_nth_fibonacci_negative():
+    """Test with negative number to cover the error case."""
+    import pytest
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(-5)
+
+def test_get_nth_fibonacci_zero():
+    """Test with zero to cover the base case."""
+    result = get_nth_fibonacci(0)
+    assert result == 0
